@@ -1,0 +1,105 @@
+Product Marketplace Dashboard - UI Mockup
+Overview
+This is a frontend UI mockup for a Product Marketplace Dashboard with role-based access control. Built with HTML, Tailwind CSS, and vanilla JavaScript, it demonstrates a modern SaaS-style interface for managing products through an approval workflow.
+
+This mockup serves as a visual prototype and functional demonstration of how users with different roles interact with the product management system. It's designed to integrate with a backend API (like the Django REST Framework backend).
+
+Features Implemented
+Core Functionality
+
+Role-Based Access Control (RBAC) – Four user roles with different permissions:
+Admin – Full access (view, create, edit, approve, manage users)
+Editor – Can create and edit products
+Approver – Can view and approve/reject products
+Viewer – Read-only access to products
+Product Management
+Product listing with filtering (All, Approved, Pending, Draft)
+Create new products with form validation
+Edit existing products (role-dependent)
+Product status workflow: draft → pending → approved
+Visual status badges with color coding
+Approval Workflow
+Dedicated approvals page for Admin and Approver roles
+Approve/Reject actions with confirmation modals
+Real-time pending count badge in navigation
+Dashboard Analytics
+Statistics cards showing product counts by status
+Recent activity feed
+Visual metrics with percentage changes
+UI/UX Features
+Responsive Design – Mobile-first approach with collapsible sidebar
+Modern Aesthetics – Clean, professional SaaS styling with gradients and shadows
+Interactive Elements:
+Toast notifications for user actions
+Confirmation modals for critical actions
+Hover effects and smooth transitions
+Form validation with inline error messages
+Customizable Branding – Company name, welcome messages, and colors can be edited via Canva's edit panel
+Technologies Used
+HTML5 – Semantic markup structure
+Tailwind CSS – Utility-first CSS framework for rapid styling
+Vanilla JavaScript – No framework dependencies for core functionality
+Google Fonts – Plus Jakarta Sans for modern typography
+Canva Elements SDK – For edit panel integration and customization
+Setup Instructions
+
+Option 1: Using Live Server (VS Code Extension)
+Install "Live Server" extension in VS Code
+Right-click the HTML file
+Select "Open with Live Server"
+Option 2:Run Locally
+Save the HTML file to your local machine
+Open the file directly in a modern web browser (Chrome, Firefox, Safari, Edge)
+No build tools or server required – it's a single self-contained HTML file
+
+Demo Usage
+On the login screen, click any role button (Admin, Editor, Approver, Viewer)
+Navigate through different sections using the sidebar menu
+Try creating products, filtering lists, and approving items (based on role permissions)
+
+Tech Decisions & Assumptions
+Architecture Decisions
+Single-page application (SPA) – All views managed client-side with JavaScript
+No external API – Uses in-memory sample data for demonstration purposes
+Self-contained file – All CSS and JavaScript inline for portability
+Tailwind CSS via CDN – Rapid prototyping without build step
+
+Design Patterns
+Role-based UI rendering – Navigation items show/hide based on user permissions
+Component-based structure – Reusable card components and modals
+State management – Simple global state object for user, view, and filter state
+Event-driven actions – DOM manipulation triggered by user interactions
+Styling Approach
+Design System – Consistent color palette with semantic naming:
+Background (#f9fafb) – Main page background
+Surface (#ffffff) – Card and panel backgrounds
+Text (#111827) – Primary text color
+Primary Action (#3b82f6) – Buttons and CTAs
+Secondary Action (#6b7280) – Secondary buttons and links
+Accessibility – WCAG 2 AA compliant color contrasts, keyboard navigation support
+Custom animations – Smooth transitions for modals, toasts, and hover states
+
+Assumptions
+Authentication is mocked – Login is simulated; no real authentication backend
+Data persistence – Product data exists only in memory (resets on page reload)
+Sample products – Pre-populated with 8 example products for demonstration
+Browser compatibility – Modern browsers with ES6+ support required
+
+Known Limitations
+No Backend Integration – This is a frontend mockup only; all data is client-side
+To integrate with your Django backend, replace the sample products array with API calls
+Implement authentication flow with JWT or session tokens
+Add error handling for network requests
+No Data Persistence – Refreshing the page resets all changes
+Consider integrating the Data SDK (included but not used in current version)
+Or connect to your backend API for real persistence
+Limited Form Validation – Basic client-side validation only
+Server-side validation should be implemented in backend
+Consider adding more robust field validation (email format, price ranges, etc.)
+No Image Upload – Product images are represented by placeholder SVG icons
+Implement file upload functionality when connecting to backend
+Consider image optimization and CDN storage
+Single Language Support – Interface is in English only
+Internationalization (i18n) would require restructuring text content
+No Search Functionality – Search input is present but not functional
+Implement client-side filtering or server-side search when connecting to API
